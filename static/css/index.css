@@ -1,0 +1,230 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+    .publication-header {
+      background-color: #ffffff; /* Light gray background for the header */
+    }
+
+    .teaser .hero-body {
+      padding-top: 0;
+      padding-bottom: 3rem;
+    }
+
+    .publication-header .hero-body {
+       padding-top: 3rem;
+       padding-bottom: 3rem;
+    }
+
+    /* No longer using flexbox here to allow for natural text wrapping */
+    .publication-title {
+    }
+
+    .title-icon {
+      height: 3.5rem; /* Controls the height of the icon */
+      width: auto;   /* Maintains aspect ratio */
+      margin-right: 0rem; /* Space between icon and title text */
+      vertical-align: middle; /* Vertically aligns the icon with the title text */
+    }
+    .main-halo-logo {
+      max-width: 650px; /* Controls the size of the main logo */
+      margin: 0 auto 1rem auto; /* Centers the logo and adds space below it */
+    }
+    /* Keep your .publication-title styles, these just add the color */
+    .publication-title .h-color { color: #d9534f; }
+    .publication-title .a-color { color: #5cb85c; }
+    .publication-title .l-color { color: #4285f4; }
+    .publication-title .o-color { color: #f0ad4e; }
+    
+
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 50%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+/* Add this new class to your CSS file */
+.video-grid-columns {
+  /* Sets a maximum width for the video row. Adjust this value to your liking. */
+  max-width: 10px; 
+  
+  /* Centers the container horizontally on the page */
+  margin-left: auto;
+  margin-right: auto;
+}
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interpolation-video-column {
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+.interpolation-panel .slider {
+  margin: 10 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}
+
+.prompt-text {
+  /* 1. Grey Color */
+  color: #5e5e5e;
+
+  /* 2. Italic Style */
+  font-style: italic;
+
+  /* 3. Font Style (a common, clean sans-serif stack) */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Additional styles to match the layout */
+  text-align: center;
+  font-size: 1.25rem; /* Makes the font slightly larger */
+  padding: 2rem 0;  /* Adds space above and below */
+}
+
+.footer-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #5e5e5e; /* Matching grey text color */
+  font-size: 1rem; /* Standard text size */
+  padding: 1rem 0;
+}
+
+.footer-text a {
+  color: #3273dc; /* A standard blue link color */
+  text-decoration: none; /* Removes the underline to match the image */
+}
+
+.footer-text a:hover {
+  text-decoration: underline; /* Adds underline on hover for better usability */
+}

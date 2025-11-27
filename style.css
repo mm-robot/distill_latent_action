@@ -1,0 +1,190 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+
+.title-icon {
+    height: 2rem; /* Set a fixed height for the icon */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 0.75rem; /* Add space between icon and text */
+}
+/* General styling for the hero section */
+.hero {
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+/* Publication title style */
+.publication-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0rem;
+}
+
+/* HALO subtitle style */
+.publication-subtitle {
+    font-family: monospace;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    /* Added flex for icon alignment */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container for author names */
+.authors {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Individual author name */
+.author {
+    margin: 0 0.5em;
+    white-space: nowrap; /* Prevents name from breaking mid-way */
+}
+
+/* Container for affiliations */
+.affiliations {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.affiliation {
+    margin: 0 0.75em;
+    white-space: nowrap;
+}
+
+/* Notes for equal contribution etc. */
+.contribution-notes {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* "Accepted by" line */
+.acceptance-line {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.acceptance-line strong {
+    color: #B82525; /* A strong red color, similar to the image */
+    font-weight: bold;
+}
+
+/* Container for the links */
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Button styling */
+.button {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Pill-shaped buttons */
+    padding: 0.5rem 1.25rem;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.hero {
+  padding: 100px 20px 40px;
+  text-align: center;
+  background-color: #f0f0f0
+}
+.hero h1 {
+  font-size: 64px;
+  margin-bottom: 10px;
+}
+.hero h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
+}
+.content h2 {
+  font-size: 28px;
+  margin-top: 60px;
+  text-align: center;
+}
+.content p, .content li {
+  font-size: 18px;
+}
+.fullwidth {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+caption {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+/* --- START: Video Gallery Styles --- */
+.video-gallery {
+  margin-top: 60px;
+}
+
+.video-category {
+  margin-bottom: 40px; /* Space between categories */
+}
+
+.video-category h3 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.video-row {
+  display: grid;
+  /* Creates 3 columns on larger screens, 2 on medium, 1 on small */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; /* Space between videos */
+}
+
+.video-row video {
+  width: 100%; /* Make video fill its container */
+  height: auto;
+  border-radius: 8px; /* Optional: adds rounded corners */
+  background-color: #000;
+}
+
+/* --- END: Video Gallery Styles --- */

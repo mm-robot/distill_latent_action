@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Distilling Universal Latent Action for Vision-Language-Action Models">
+  <meta name="keywords" content="keywords">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Distilling Universal Latent Action for Vision-Language-Action Models</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<div class="publication-header">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <!-- Main HALO logo image added here -->
+            <!-- <img src="static/images/halo_left.png" alt="HALO Robot Logo" class="main-halo-logo"> -->
+            
+            <!-- Title modified to include colored spans -->
+             
+            <h1 class="title is-1 publication-title">
+              <!-- <img src="static/images/halo-icon.png" alt="Robot Icon" class="title-icon"> -->
+              Distilling Universal Latent Action for Vision-Language-Action Models
+            </h1>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://github.com/lzl2040/">Zuolei Li</a><sup>1&dagger;</sup>,</span>
+              <span class="author-block">
+                <a href="https://people.ucas.ac.cn/~0066348">Xingyu Gao</a><sup>1&#9993;</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/NsurrenderX">Xiaofan Wang</a><sup>1&dagger;</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://www.microsoft.com/en-us/research/people/jianf">Jianlong Fu</a><sup>2</sup>
+              </span>
+            </div>
+
+            <div class="is-size-6" style="margin-top: 5px;">
+              <span class="author-block" style="margin-right: 20px;">
+                  <sup>&dagger;</sup> Work conducted during internship at Microsoft Research
+              </span>
+              <span class="author-block" style="margin-right: 20px;">
+                  <sup>&#9993;</sup> Corresponding author
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+                <span class="author-block" style="margin-right: 20px;">
+                  <sup>1</sup>The Institute of Microelectronics, CAS
+                </span>
+                <span class="author-block" style="margin-right: 20px;">
+                  <sup>2</sup>Microsoft Research
+                </span>
+            </div>
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="halo.pdf"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/NsurrenderX/gcr_lerobot_2"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="video-wrapper">
+        <video autoplay muted loop playsinline height="100%">
+          <source src="static/videos/simpler/success_time_1750328050_obj_-0.05_0.030000000000000002_qpos_0.39878425002098083_is_drawer_open_True_has_contact_1.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">
+          franka video here<br>
+          HALO</span> is a Long Horizon Latent Action Learning framework for general robot manipulation.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+
+<div class="container">
+  <h2 class="title is-2 has-text-centered">Simulation Examples</h2>
+
+  <h3 class="title is-4 has-text-centered">Libero Tasks</h3>
+  <div class="columns is-centered">
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/libero_long/2025_06_07-05_56_22--episode=108--success=True--task=turn_on_the_stove_and_put_the_moka_pot_on_it.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Turn on the stove and put the moka pot on it</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/libero_long/2025_06_07-05_56_22--episode=163--success=True--task=put_the_black_bowl_in_the_bottom_drawer_of_the_cab.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Put the black bowl in the bottom drawer of the cabinet and close it</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/libero_long/2025_06_07-05_56_22--episode=65--success=True--task=put_both_the_cream_cheese_box_and_the_butter_in_th.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Put both the cream cheese box and the butter in the basket</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="columns is-centered">
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/libero_long/2025_06_07-05_56_22--episode=417--success=True--task=put_both_moka_pots_on_the_stove.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Put both moka pots on the stove</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/libero_long_task/put_cheese_bowl_on_stove_success.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Put the cream cheese in the bowl and put the bowl on the stove</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/libero_long/2025_06_07-05_56_22--episode=466--success=True--task=put_the_yellow_and_white_mug_in_the_microwave_and_.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>put the yellow and white mug in the microwave and close it</p>
+      </div>
+    </div>
+  </div>
+
+    <h3 class="title is-4 has-text-centered">Calvin Tasks</h3>
+  <div class="columns is-centered">
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/calvin/4x_trial_30.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Lift blue block table, place in drawer, push red block right, close drawer, turn off led</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/calvin/4x_trial_152.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Turn on led, rotate red block left, open drawer, lift blue block table, place in drawer</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/calvin/4x_trial_216.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Open drawer, lift red block table, stack block, unstack block, turn on lightbulb</p>
+      </div>
+    </div>
+  </div>
+  <div class="columns is-centered">
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/calvin/4x_trial_17.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+            <div class="has-text-centered">
+        <p>Push red block left, move slider right, lift blue block slider, place in slider, turn on lightbulb</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/calvin/4x_trial_175.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Turn off led, push blue block left, push into drawer, move slider right, lift blue block drawer</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/calvin/4x_trial_195.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Open drawer, lift red block slider, place in slider, push into drawer, lift blue block drawer</p>
+      </div>
+    </div>
+  </div>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Learning transferable latent actions from large-scale object manipulation videos can significantly enhance generalization in downstream robotics tasks, as such representations 
+            are agnostic to different robot embodiments. Existing approaches primarily rely on visual reconstruction objectives while neglecting physical priors, leading to sub-optimal performance 
+            in learning universal representations.
+          </p>
+
+          <p>
+            To address these challenges, we propose a Universal Latent Action Learning framework that takes task instructions and multiple frames as inputs, and optimizes both future frame reconstruction 
+            and action sequence prediction. Unlike prior works, incorporating action predictions (e.g., gripper or hand trajectories and orientations) allows the model to capture richer physical priors 
+            such as real-world distances and orientations, thereby enabling seamless transferability to downstream tasks. We further decompose the latent actions into learnable motion and scene tokens to 
+            distinguish the robot’s active movements from environmental changes, thus filtering out irrelevant dynamics.
+          </p>
+
+          <p>
+            By distilling the learned latent actions into the latest VLA models, we achieve strong performance across both simulated (SIMPLER and LIBERO) and real-world robot settings. Notably, with only 10 
+            real-world trajectories per task collected on a Franka robot, our approach successfully completes all five challenging tasks, demonstrating strong few-shot transferability in robotic manipulation.
+          </p>
+
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+<!-- Key Contribution -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Key Contribution</h2>
+        <div class="content has-text-justified">
+    <ul>
+      <li>Supports <b>long-horizon</b> visual-linguistic context</li>
+      <li><b>State-aware</b> latent re-representation for cross-modal alignment</li>
+            <li>Efficiently trained a <b>10B</b> model on a cluster of <b>32 A100 40G GPUs</b> at batch size of <b>1280</b></li>
+      <li>Outperforms <b>OpenVLA</b> and <b>&pi;<sub>0</sub></b> in both simulation and real-world</li>
+    </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+          <h2 class="title is-3">Model Architecture</h2>
+    <img src="static/images/comparision_wo_caption.png" alt="HALO Model Architecture" class="fullwidth">
+    <div class="prompt-text">
+    <p>
+  Existing methods often ignore disentangling robot actions from environmental changes.
+  In contrast, we learn a disentangled representation and decode latent actions into both
+  the future visual frame \( V_{t+k} \) and physical actions \( A_{t:t+k} \)
+  that enables more accurate and transferable control for downstream tasks.
+</p>
+
+    </div>
+
+    <img src="static/images/disitll_overview_wo_caption.png" alt="Attention Mechanism" class="fullwidth">
+    <div class="prompt-text">
+    <p>
+       By optimizing the VLMs with latent action
+      alignment loss and reasoning preservation loss, we distill generalizable action representations learned from both robot and human hand
+      demonstration videos, while simultaneously maintaining sub-task planning capabilities. This is followed by an action expert module for
+      continuous action prediction.
+    </p>
+    </div>
+
+        </div>
+      </div>
+    </div>
+</section>
+      <!-- Experimental Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+          <h2 class="title is-3">Experimental Results</h2>
+    <img src="static/images/simpler_fractal_results.png" alt="table of simpler fractal results" class="fullwidth">
+    <img src="static/images/simpler_bridge_results.png" alt="table of simpler bridge results" class="fullwidth">
+    <img src="static/images/libero_results.png" alt="table of libreo results" class="fullwidth">
+    <p>
+      HALO outperforms existing models like OpenVLA and pi0 in both simulation and real-world tasks, demonstrating superior long-horizon task performance.
+    </p>
+    </div>
+        </div>
+      </div>
+</section>
+
+
+<!-- Task Visualization -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+          <h2 class="title is-3">Task Visualization</h2>
+          Example long-horizon task: <br>
+    <img src="static/images/real_word_a.JPG" alt="Heat the Food Sequence" class="fullwidth">
+    <div class="prompt-text">
+    Open the oven, pick up the bowl, pour the bowl of food into pot, put the pot in the oven and close the oven.
+    </div>
+
+      <br>
+    <img src="static/images/real_word_b.JPG" alt="Heat the Food Sequence" class="fullwidth">
+    <div class="prompt-text">
+      Put the pot in the oven, close the oven, set the timer, open the oven and put the potbackon the table.
+
+    </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="halo.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/NsurrenderX/gcr_lerobot_2" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="footer-text">
+This template is borrowed from <a href="https://nerfies.github.io/">NERFIES</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
