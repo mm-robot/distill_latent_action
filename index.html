@@ -62,18 +62,18 @@
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://github.com/lzl2040/">Zuolei Li</a><sup>1&dagger;</sup>,</span>
+                <a href="https://github.com/lzl2040/">Zuolei Li</a><sup>1,2&dagger;</sup>,</span>
               <span class="author-block">
-                <a href="https://people.ucas.ac.cn/~0066348">Xingyu Gao</a><sup>1&#9993;</sup>,</span>
+                <a href="https://people.ucas.ac.cn/~0066348">Xingyu Gao</a><sup>1,2&#9993;</sup>,</span>
               <span class="author-block">
-                <a href="https://github.com/NsurrenderX">Xiaofan Wang</a><sup>1&dagger;</sup>
+                <a href="https://github.com/NsurrenderX">Xiaofan Wang</a><sup>1,2&dagger;</sup>
               </span>
               <span class="author-block">
                 <a href="https://www.microsoft.com/en-us/research/people/jianf">Jianlong Fu</a><sup>2</sup>
               </span>
             </div>
 
-            <div class="is-size-6" style="margin-top: 5px;">
+            <div class="is-size-5" style="margin-top: 5px;">
               <span class="author-block" style="margin-right: 20px;">
                   <sup>&dagger;</sup> Work conducted during internship at Microsoft Research
               </span>
@@ -84,10 +84,22 @@
 
             <div class="is-size-5 publication-authors">
                 <span class="author-block" style="margin-right: 20px;">
-                  <sup>1</sup>The Institute of Microelectronics, CAS
+                  <sup>1 </sup>The Institute of Microelectronics, CAS
                 </span>
                 <span class="author-block" style="margin-right: 20px;">
-                  <sup>2</sup>Microsoft Research
+                  <sup>2 </sup>University of Chinese Academy of Sciences
+                </span>
+                <span class="author-block" style="margin-right: 20px;">
+                  <sup>3 </sup>Microsoft Research
+                </span>
+            </div>
+
+            <div class="is-size-6 publication-authors">
+                <span class="author-block" style="margin-right: 20px;">
+                  {lizuolei24, gaoxingyu, wangxiaofan24}@ime.ac.cn
+                </span>
+                <span class="author-block" style="margin-right: 20px;">
+                 jianf@microsoft.com
                 </span>
             </div>
 
@@ -114,14 +126,24 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://github.com/NsurrenderX/gcr_lerobot_2"
-                     class="external-link button is-normal is-rounded is-dark">
+                  <a href="#"
+                    class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
-                    </a>
+                    <span>Code Coming Soon</span>
+                  </a>
                 </span>
+
+              <span class="link-block">
+                <a href="#"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      🤗
+                  </span>
+                  <span>Model Coming Soon</span>
+                </a>
+              </span>
               </div>
             </div>
           </div>
@@ -151,31 +173,100 @@
 </section> -->
 
 
+  <h3 class="title is-4 has-text-centered">
+      <i class="fas fa-cogs" style="margin-right:6px; color:#6c63ff;"></i>
+      Franka Robot 
+      <span class="fewshot-text">Few-Shot Demonstrations</span>
+  </h3>
 
-<div class="container">
-  <h2 class="title is-2 has-text-centered">Simulation Examples</h2>
+  <style>
+  .fewshot-text {
+      font-weight: 700;
+      font-size: 1.2em;
+      background: linear-gradient(90deg, #ffdd57, #ff9e42, #ff6b6b, #ffdd57);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textGradient 4s ease infinite, pulse 1.5s ease-in-out infinite;
+      display: inline-block; /* 必须，否则 transform 不生效 */
+  }
 
-  <h3 class="title is-4 has-text-centered">Libero Tasks</h3>
+  /* 渐变流动动画 */
+  @keyframes textGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+  }
+
+  /* 先缩小再放大再缩小 */
+  @keyframes pulse {
+      0% { transform: scale(0.9); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(0.9); }
+  }
+  </style>
+
+
+
+
   <div class="columns is-centered">
     <div class="column is-3">
       <video controls muted loop playsinline width="100%">
-        <source src="static/videos/libero_long/2025_06_07-05_56_22--episode=108--success=True--task=turn_on_the_stove_and_put_the_moka_pot_on_it.mp4" type="video/mp4">
+        <source src="static/videos/real_world/pick_brush_speed.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="has-text-centered">
-        <p>Turn on the stove and put the moka pot on it</p>
+        <p>Dip the brush in the sauce</p>
       </div>
     </div>
     <div class="column is-3">
       <video controls muted loop playsinline width="100%">
-        <source src="static/videos/libero_long/2025_06_07-05_56_22--episode=163--success=True--task=put_the_black_bowl_in_the_bottom_drawer_of_the_cab.mp4" type="video/mp4">
+        <source src="static/videos/real_world/put_pan_speed.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="has-text-centered">
-        <p>Put the black bowl in the bottom drawer of the cabinet and close it</p>
+        <p>Put the pot in the oven</p>
       </div>
     </div>
     <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/real_world/put_block_speed.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Put the green block into the corresponding slot</p>
+      </div>
+    </div>
+  </div>
+  <div class="columns is-centered">
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/real_world/pick_up_red_cup_speed.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Pick up the cup with red line</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/real_world/pick_up_blue_cup_speed.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Pick up the blue cup</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/real_world/pick_up_blue_cup_speed.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Close the oven</p>
+      </div>
+    </div>
+    <!-- <div class="column is-3">
       <video controls muted loop playsinline width="100%">
         <source src="static/videos/libero_long/2025_06_07-05_56_22--episode=65--success=True--task=put_both_the_cream_cheese_box_and_the_butter_in_th.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -183,98 +274,39 @@
       <div class="has-text-centered">
         <p>Put both the cream cheese box and the butter in the basket</p>
       </div>
-    </div>
+    </div> -->
   </div>
-
-    <div class="columns is-centered">
-    <div class="column is-3">
-      <video controls muted loop playsinline width="100%">
-        <source src="static/videos/libero_long/2025_06_07-05_56_22--episode=417--success=True--task=put_both_moka_pots_on_the_stove.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="has-text-centered">
-        <p>Put both moka pots on the stove</p>
-      </div>
-    </div>
-    <div class="column is-3">
-      <video controls muted loop playsinline width="100%">
-        <source src="static/videos/libero_long_task/put_cheese_bowl_on_stove_success.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="has-text-centered">
-        <p>Put the cream cheese in the bowl and put the bowl on the stove</p>
-      </div>
-    </div>
-    <div class="column is-3">
-      <video controls muted loop playsinline width="100%">
-        <source src="static/videos/libero_long/2025_06_07-05_56_22--episode=466--success=True--task=put_the_yellow_and_white_mug_in_the_microwave_and_.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="has-text-centered">
-        <p>put the yellow and white mug in the microwave and close it</p>
-      </div>
-    </div>
-  </div>
-
-    <h3 class="title is-4 has-text-centered">Calvin Tasks</h3>
+  <h3 class="title is-4 has-text-centered">Dual-Arm Aloha Robot</h3>
   <div class="columns is-centered">
     <div class="column is-3">
       <video controls muted loop playsinline width="100%">
-        <source src="static/videos/calvin/4x_trial_30.mp4" type="video/mp4">
+        <source src="static/videos/real_world/msra_pi0_press_red_button_speed.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="has-text-centered">
-        <p>Lift blue block table, place in drawer, push red block right, close drawer, turn off led</p>
+        <p>Push the red button with the right gripper</p>
       </div>
     </div>
     <div class="column is-3">
       <video controls muted loop playsinline width="100%">
-        <source src="static/videos/calvin/4x_trial_152.mp4" type="video/mp4">
+        <source src="static/videos/real_world/msra_pi0_pull_black_wire_speed.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="has-text-centered">
-        <p>Turn on led, rotate red block left, open drawer, lift blue block table, place in drawer</p>
+        <p>Pull the black wire</p>
       </div>
     </div>
     <div class="column is-3">
       <video controls muted loop playsinline width="100%">
-        <source src="static/videos/calvin/4x_trial_216.mp4" type="video/mp4">
+        <source src="static/videos/real_world/msra_pi0_turn_knob_to_1_speed.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="has-text-centered">
-        <p>Open drawer, lift red block table, stack block, unstack block, turn on lightbulb</p>
+        <p>Turn the knob to position 1</p>
       </div>
     </div>
   </div>
-  <div class="columns is-centered">
-    <div class="column is-3">
-      <video controls muted loop playsinline width="100%">
-        <source src="static/videos/calvin/4x_trial_17.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-            <div class="has-text-centered">
-        <p>Push red block left, move slider right, lift blue block slider, place in slider, turn on lightbulb</p>
-      </div>
-    </div>
-    <div class="column is-3">
-      <video controls muted loop playsinline width="100%">
-        <source src="static/videos/calvin/4x_trial_175.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="has-text-centered">
-        <p>Turn off led, push blue block left, push into drawer, move slider right, lift blue block drawer</p>
-      </div>
-    </div>
-    <div class="column is-3">
-      <video controls muted loop playsinline width="100%">
-        <source src="static/videos/calvin/4x_trial_195.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="has-text-centered">
-        <p>Open drawer, lift red block slider, place in slider, push into drawer, lift blue block drawer</p>
-      </div>
-    </div>
-  </div>
+</div>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -307,9 +339,9 @@
 </div>
 </section>
 <!-- Key Contribution -->
-<section class="section">
+
+<!-- <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Key Contribution</h2>
@@ -325,7 +357,7 @@
       </div>
     </div>
   </div>
-</section> 
+</section>  -->
 
 
 <section class="section">
@@ -333,31 +365,30 @@
 
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
+          <h2 class="title is-3">Our New Pipeline for Latent Action Learning</h2>
+          <img src="static/images/comparision_wo_caption.png" alt="HALO Model Architecture" class="fullwidth">
+          <div class="prompt-text">
+            <p style="text-align: justify;">
+              Existing methods often ignore disentangling robot actions from environmental changes.
+              In contrast, we learn a disentangled representation and decode latent actions into both
+              the future visual frame \( V_{t+k} \) and physical actions \( A_{t:t+k} \)
+              that enables more accurate and transferable control for downstream tasks.
+            </p>
+
+          </div>
           <h2 class="title is-3">Model Architecture</h2>
-    <img src="static/images/comparision_wo_caption.png" alt="HALO Model Architecture" class="fullwidth">
-    <div class="prompt-text">
-    <p>
-  Existing methods often ignore disentangling robot actions from environmental changes.
-  In contrast, we learn a disentangled representation and decode latent actions into both
-  the future visual frame \( V_{t+k} \) and physical actions \( A_{t:t+k} \)
-  that enables more accurate and transferable control for downstream tasks.
-</p>
-
-    </div>
-
-    <img src="static/images/disitll_overview_wo_caption.png" alt="Attention Mechanism" class="fullwidth">
-    <div class="prompt-text">
-    <p>
-       By optimizing the VLMs with latent action
-      alignment loss and reasoning preservation loss, we distill generalizable action representations learned from both robot and human hand
-      demonstration videos, while simultaneously maintaining sub-task planning capabilities. This is followed by an action expert module for
-      continuous action prediction.
-    </p>
-    </div>
-
-        </div>
+          <img src="static/images/disitll_overview_wo_caption.png" alt="Attention Mechanism" class="fullwidth">
+          <div class="prompt-text">
+            <p style="text-align: justify;">
+              By optimizing the VLMs with latent action
+              alignment loss and reasoning preservation loss, we distill generalizable action representations learned from both robot and human hand
+              demonstration videos, while simultaneously maintaining sub-task planning capabilities. This is followed by an action expert module for
+              continuous action prediction.
+            </p>
+          </div>
       </div>
     </div>
+  </div>
 </section>
       <!-- Experimental Results -->
 <section class="section">
@@ -370,7 +401,7 @@
     <img src="static/images/simpler_bridge_results.png" alt="table of simpler bridge results" class="fullwidth">
     <img src="static/images/libero_results.png" alt="table of libreo results" class="fullwidth">
     <p>
-      The results show that our method surpasses existing VLA models, such as pi0 and pi05, across multiple simulation environments, including SIMPLER and LIBERO, demonstrating the effectiveness of latent action distillation.
+      The results show that our method surpasses existing VLA models, such as \( \pi_0 \) and \( \pi_{0.5} \), across multiple simulation environments, including SIMPLER and LIBERO, demonstrating the effectiveness of latent action distillation.
     </p>
     </div>
         </div>
@@ -386,28 +417,154 @@
       <div class="column is-four-fifths">
           <h2 class="title is-3">Task Visualization</h2>
           Example long-horizon task: <br>
-    <img src="static/images/real_word_a.JPG" alt="Heat the Food Sequence" class="fullwidth">
-    <div class="prompt-text">
-    Open the oven, pick up the bowl, pour the bowl of food into pot, put the pot in the oven and close the oven.
-    </div>
+          <img src="static/images/real_word_a.JPG" alt="Heat the Food Sequence" class="fullwidth">
+          <div class="prompt-text">
+            Open the oven, pick up the bowl, pour the bowl of food into pot, put the pot in the oven and close the oven.
+          </div>
 
-      <br>
-    <img src="static/images/real_word_b.JPG" alt="Heat the Food Sequence" class="fullwidth">
-    <div class="prompt-text">
-      Put the pot in the oven, close the oven, set the timer, open the oven and put the potbackon the table.
+          <!-- <br>
+          <img src="static/images/real_word_b.JPG" alt="Heat the Food Sequence" class="fullwidth">
+          <div class="prompt-text">
+            Put the pot in the oven, close the oven, set the timer, open the oven and put the potbackon the table.
 
-    </div>
-        </div>
+          </div> -->
       </div>
     </div>
+  </div>
 </section>
+
+<div class="container">
+  <h2 class="title is-2 has-text-centered">Simulation Examples</h2>
+
+  <h3 class="title is-4 has-text-centered">Libero Tasks</h3>
+  <div class="columns is-centered">
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/libero_long/put_the_white_mug_on_the_plate_and_put_the_chocola.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Put the white mug on the left plate and put the yellow and white mug on the right plate</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/libero_long/put_the_black_bowl_in_the_bottom_drawer_of_the_cab.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Put the black bowl in the bottom drawer of the cabinet and close it</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/libero_long/put_both_the_alphabet_soup_and_the_cream_cheese_bo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Put both the alphabet soup and the cream cheese box in the basket</p>
+      </div>
+    </div>
+  </div>
+
+  
+
+    <div class="columns is-centered">
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/libero_goal/slide_open_the_top_drawer_and_store_the_bowl_insid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Open the top drawer and put the bowl inside</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/libero_long/put_the_yellow_and_white_mug_in_the_microwave_and_.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Put the yellow and white mug in the microwave and close it</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/libero_long/turn_on_the_stove_and_put_the_moka_pot_on_it.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Turn on the stove and put the moka pot on it</p>
+      </div>
+    </div>
+  </div>
+
+    <h3 class="title is-4 has-text-centered">Simpler Tasks</h3>
+  <div class="columns is-centered">
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/simpler_fractal_move_near/move_7up_can_near_apple.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Move 7up can near apple</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/simpler_fractal_open_close/open_bottom_drawer.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Open bottom drawer</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/simpler_fractal_put_apple/put_apple.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Open top drawer and put the apple.</p>
+      </div>
+    </div>
+  </div>
+  <div class="columns is-centered">
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/simpler_bridge_stack_block/stack_block.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+            <div class="has-text-centered">
+        <p>Stack green block on yellow block</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/simpler_bridge_put_eggplant/put_eggplant.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Put the eggplant in yellow basket</p>
+      </div>
+    </div>
+    <div class="column is-3">
+      <video controls muted loop playsinline width="100%">
+        <source src="static/videos/simpler_bridge_put_carrot/put_carrot.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="has-text-centered">
+        <p>Put the carrot on the plate</p>
+      </div>
+    </div>
+  </div>
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-      @article{li2025distilling,
+    @article{li2025distilling,
       title={Distilling Universal Latent Actions for Vision-Language-Action Models},
       author={Li, Zuolei and Gao, Xingyu and Wang, Xiaofan and Fu, Jianlong},
       journal={arXiv preprint arXiv:XXXX.XXXXX},
