@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Distilling Universal Latent Action for Vision-Language-Action Models">
+        content="LatBot: Distilling Universal Latent Action for Vision-Language-Action Models">
   <meta name="keywords" content="keywords">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Distilling Universal Latent Action for Vision-Language-Action Models</title>
+  <title>LatBot: Distilling Universal Latent Action for Vision-Language-Action Models</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -96,7 +96,10 @@
 
             <div class="is-size-6 publication-authors">
                 <span class="author-block" style="margin-right: 20px;">
-                  {lizuolei24, gaoxingyu, wangxiaofan24}@ime.ac.cn
+                  {lizuolei24, wangxiaofan24}@ime.ac.cn
+                </span>
+                <span class="author-block" style="margin-right: 20px;">
+                  gxy9910@gmail.com
                 </span>
                 <span class="author-block" style="margin-right: 20px;">
                  jianf@microsoft.com
@@ -212,7 +215,7 @@
   <div class="columns is-centered">
     <div class="column is-3">
       <video controls muted loop playsinline width="100%">
-        <source src="static/videos/real_world/pick_brush_speed.mp4" type="video/mp4">
+        <source src="static/videos/real_world/pick_brush_speed_2.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="has-text-centered">
@@ -259,7 +262,7 @@
     </div>
     <div class="column is-3">
       <video controls muted loop playsinline width="100%">
-        <source src="static/videos/real_world/pick_up_blue_cup_speed.mp4" type="video/mp4">
+        <source src="static/videos/real_world/close_the_oven_speed.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="has-text-centered">
@@ -400,9 +403,9 @@
     <img src="static/images/simpler_fractal_results.png" alt="table of simpler fractal results" class="fullwidth">
     <img src="static/images/simpler_bridge_results.png" alt="table of simpler bridge results" class="fullwidth">
     <img src="static/images/libero_results.png" alt="table of libreo results" class="fullwidth">
-    <p>
+    <div class="prompt-text" style="text-align: justify;">
       The results show that our method surpasses existing VLA models, such as \( \pi_0 \) and \( \pi_{0.5} \), across multiple simulation environments, including SIMPLER and LIBERO, demonstrating the effectiveness of latent action distillation.
-    </p>
+    </div>
     </div>
         </div>
       </div>
@@ -416,10 +419,13 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
           <h2 class="title is-3">Task Visualization</h2>
-          Example long-horizon task: <br>
-          <img src="static/images/real_word_a.JPG" alt="Heat the Food Sequence" class="fullwidth">
-          <div class="prompt-text">
-            Open the oven, pick up the bowl, pour the bowl of food into pot, put the pot in the oven and close the oven.
+          <img src="static/images/real_world.png" alt="Heat the Food Sequence" class="fullwidth">
+          <div class="prompt-text" style="text-align: justify;">
+            Tasks include pick-up, insertion, and other manipulation skills that demand both precise translational control and rotational motions.
+          </div>
+          <img src="static/images/heat_map.png" alt="Heat the Food Sequence" class="fullwidth">
+          <div class="prompt-text" style="text-align: justify;">
+            We visualize the attention maps between the final text token and the visual features for both \( \pi_{0.5} \) and our model across various real-robot tasks, and observe that latent-action distillation significantly strengthens the model’s spatial understanding.
           </div>
 
           <!-- <br>
