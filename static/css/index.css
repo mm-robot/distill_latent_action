@@ -209,7 +209,7 @@ body {
   /* Additional styles to match the layout */
   text-align: center;
   font-size: 1.25rem; /* Makes the font slightly larger */
-  padding: 2rem 0;  /* Adds space above and below */
+  padding: 0.5rem 0;  /* Adds space above and below */
 }
 
 .footer-text {
