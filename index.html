@@ -257,7 +257,7 @@
         Your browser does not support the video tag.
       </video>
       <div class="has-text-centered">
-        <p>Pick up the cup</p>
+        <p>Pick up the blue cup <br> Pick up the red cup</p>
       </div>
     </div>
     <div class="column is-3">
@@ -375,10 +375,10 @@
           <img src="static/images/comparision_wo_caption.png" alt="HALO Model Architecture" class="fullwidth">
           <div class="prompt-text">
             <p style="text-align: justify;">
-              <ul style="list-style: none; padding-left: 0; text-align: left;">
+              <ul style="list-style: none; padding-left: 0; text-align: justify;">
 
                 <li style="margin-bottom: 12px;">
-                  ⭐ <b>Disentangled Latent Action Space</b>: We separate robot-induced motion from environment dynamics, reducing task-irrelevant noise.
+                  ⚡ <b>Disentangled Latent Action Space</b>: We separate robot-induced motion from environment dynamics, reducing task-irrelevant noise.
                 </li>
 
                 <li style="margin-bottom: 12px;">
@@ -386,7 +386,7 @@
                 </li>
 
                 <li style="margin-bottom: 12px;">
-                  🎯 <b>Instruction & Multi-Frame Guided Learning</b>: We combine language instructions with multi-frame cues, enabling clearer intent comprehension and more precise latent action generation.
+                  ⚡ <b>Instruction & Multi-Frame Guided Learning</b>: We combine language instructions with multi-frame cues, enabling clearer intent comprehension and more precise latent action generation.
                 </li>
 
               </ul>
@@ -560,23 +560,37 @@
 
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-          <h2 class="title is-3">The Distilled VLM Benefits from Latent Actions</h2>
-          <img src="static/images/real_world.png" alt="Heat the Food Sequence" class="fullwidth">
-          <div class="prompt-text" style="text-align: justify;">
-            Tasks include pick-up, insertion, and other manipulation skills that demand both precise translational control and rotational motions.
+           <!-- 标题和说明容器 -->
+          <div class="section-text" style="text-align: justify; margin-bottom: 1.5rem;">
+            <h2 class="title is-3" style="text-align: center;">The Distilled VLM Benefits from Latent Actions</h2>
+            <p style="color: #555; font-size: 1rem; line-height: 1.6;">
+              We distill latent action knowledge from the latent action model into the vision-language model (VLM) of the vision-language-action (VLA) model (e.g., \( \pi_{0.5} \)) and compare it with the original VLM of the VLA on real-world tasks.
+            </p>
           </div>
-          <img src="static/images/heat_map.png" alt="Heat the Food Sequence" class="fullwidth">
-          <div class="prompt-text" style="text-align: justify;">
-            We visualize the VLM’s attention maps between the final text token and the visual features for both \( \pi_{0.5} \) and our model across various real-robot tasks, and observe that 
-            <span style="color: #E6554F; font-weight: 600;">latent-action distillation significantly strengthens the model’s spatial understanding</span>.
+          <!-- 图片 1 -->
+          <div class="image-section" style="margin-bottom: 1rem;">
+            <img src="static/images/real_world.png" alt="Real Robot Tasks" style="width: 110%; max-width: none; height: auto;margin-left: -5%;">
           </div>
 
-          <!-- <br>
-          <img src="static/images/real_word_b.JPG" alt="Heat the Food Sequence" class="fullwidth">
-          <div class="prompt-text">
-            Put the pot in the oven, close the oven, set the timer, open the oven and put the potbackon the table.
+          <!-- 任务说明 -->
+          <div class="section-text" style="text-align: justify; margin-bottom: 1.5rem;">
+            <p>
+              Tasks include pick-up, insertion, and other manipulation skills that demand both precise translational control and rotational motions.
+            </p>
+          </div>
 
-          </div> -->
+          <!-- 图片 2 -->
+          <div class="image-section" style="margin-bottom: 1rem;">
+            <img src="static/images/heat_map.png" alt="Attention Heat Map" style="width: 110%; max-width: none; height: auto;margin-left: -5%;">
+          </div>
+
+          <!-- 注意力可视化说明 -->
+          <div class="section-text" style="text-align: justify;">
+            <p>
+              We visualize the VLM’s attention maps between the final text token and the visual features for both \( \pi_{0.5} \) and our model across various real-robot tasks, and observe that 
+              <span style="color: #E6554F; font-weight: 600;">latent-action distillation significantly strengthens the model’s spatial understanding</span>.
+            </p>
+          </div>
       </div>
     </div>
   </div>
