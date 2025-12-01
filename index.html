@@ -377,17 +377,26 @@
             <p style="text-align: justify;">
               <ul style="list-style: none; padding-left: 0; text-align: justify;">
 
-                <li style="margin-bottom: 12px;">
-                  ⚡ <b>Disentangled Latent Action Space</b>: We separate robot-induced motion from environment dynamics, reducing task-irrelevant noise.
-                </li>
+                  <li style="margin-bottom: 12px;">
+                      <span style="display: inline-block;">
+                          ⚡ <b>Disentangled Latent Action Space</b>:
+                      </span> 
+                      We separate robot-induced motion from environment dynamics using learnable scene and motion tokens, reducing task-irrelevant noise.
+                  </li>
 
-                <li style="margin-bottom: 12px;">
-                  ⚡ <b>Action-Optimized Latent Learning</b>: We learn latent actions through action prediction, enabling them to encode physical priors and transfer seamlessly to downstream tasks.
-                </li>
+                  <li style="margin-bottom: 12px;">
+                      <span style="display: inline-block;">
+                          ⚡ <b>Action-Optimized Latent Learning</b>:
+                      </span>
+                      We learn latent actions through action prediction, enabling them to encode physical priors and transfer seamlessly to downstream tasks.
+                  </li>
 
-                <li style="margin-bottom: 12px;">
-                  ⚡ <b>Instruction & Multi-Frame Guided Learning</b>: We combine language instructions with multi-frame cues, enabling clearer intent comprehension and more precise latent action generation.
-                </li>
+                  <li style="margin-bottom: 12px;">
+                      <span style="display: inline-block;">
+                          ⚡ <b>Instruction & Multi-Frame Guided Learning</b>:
+                      </span>
+                      We combine language instructions with multi-frame cues, where the language can capture task-relevant motions and multi-frame inputs can capture motion trends, resulting in more precise latent actions.
+                  </li>
 
               </ul>
 
