@@ -111,7 +111,7 @@
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="halo.pdf"
+                  <a href="LatBot.pdf"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -120,7 +120,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="#"
+                  <a href="https://arxiv.org/abs/2511.23034"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <i class="ai ai-arxiv"></i>
@@ -219,7 +219,7 @@
         Your browser does not support the video tag.
       </video>
       <div class="has-text-centered">
-        <p>Dip the brush in the sauce</p>
+        <p>Dip the brush in the water</p>
       </div>
     </div>
     <div class="column is-3">
@@ -228,7 +228,7 @@
         Your browser does not support the video tag.
       </video>
       <div class="has-text-centered">
-        <p>Put the pot in the oven</p>
+        <p>Put the pan in the oven</p>
       </div>
     </div>
     <div class="column is-3">
@@ -244,20 +244,20 @@
   <div class="columns is-centered">
     <div class="column is-3">
       <video controls muted loop playsinline width="100%">
-        <source src="static/videos/real_world/pick_up_red_cup_speed.mp4" type="video/mp4">
+        <source src="static/videos/real_world/pick_yellow_block_speed.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="has-text-centered">
-        <p>Pick up the cup with red line</p>
+        <p>Put the yellow block into the corresponding slot</p>
       </div>
     </div>
     <div class="column is-3">
       <video controls muted loop playsinline width="100%">
-        <source src="static/videos/real_world/pick_up_blue_cup_speed.mp4" type="video/mp4">
+        <source src="static/videos/real_world/pick_up_cup_speed.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="has-text-centered">
-        <p>Pick up the blue cup</p>
+        <p>Pick up the cup</p>
       </div>
     </div>
     <div class="column is-3">
@@ -375,10 +375,23 @@
           <img src="static/images/comparision_wo_caption.png" alt="HALO Model Architecture" class="fullwidth">
           <div class="prompt-text">
             <p style="text-align: justify;">
-              Existing methods often ignore disentangling robot actions from environmental changes.
-              In contrast, we learn a disentangled representation and decode latent actions into both
-              the future visual frame \( V_{t+k} \) and physical actions \( A_{t:t+k} \)
-              that enables more accurate and transferable control for downstream tasks.
+              <ul style="list-style: none; padding-left: 0; text-align: left;">
+
+                <li style="margin-bottom: 12px;">
+                  ⭐ <b>Disentangled Latent Action Space</b>: We separate robot-induced motion from environment dynamics, reducing task-irrelevant noise.
+                </li>
+
+                <li style="margin-bottom: 12px;">
+                  ⚡ <b>Action-Optimized Latent Learning</b>: We learn latent actions through action prediction, enabling them to encode physical priors and transfer seamlessly to downstream tasks.
+                </li>
+
+                <li style="margin-bottom: 12px;">
+                  🎯 <b>Instruction & Multi-Frame Guided Learning</b>: We fuse language instructions with multi-frame cues, improving intention understanding and producing more accurate latent actions.
+                </li>
+
+              </ul>
+
+
             </p>
 
           </div>
@@ -414,33 +427,6 @@
       </div>
 </section>
 
-
-<!-- Task Visualization -->
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-          <h2 class="title is-3">Task Visualization</h2>
-          <img src="static/images/real_world.png" alt="Heat the Food Sequence" class="fullwidth">
-          <div class="prompt-text" style="text-align: justify;">
-            Tasks include pick-up, insertion, and other manipulation skills that demand both precise translational control and rotational motions.
-          </div>
-          <img src="static/images/heat_map.png" alt="Heat the Food Sequence" class="fullwidth">
-          <div class="prompt-text" style="text-align: justify;">
-            We visualize the attention maps between the final text token and the visual features for both \( \pi_{0.5} \) and our model across various real-robot tasks, and observe that latent-action distillation significantly strengthens the model’s spatial understanding.
-          </div>
-
-          <!-- <br>
-          <img src="static/images/real_word_b.JPG" alt="Heat the Food Sequence" class="fullwidth">
-          <div class="prompt-text">
-            Put the pot in the oven, close the oven, set the timer, open the oven and put the potbackon the table.
-
-          </div> -->
-      </div>
-    </div>
-  </div>
-</section>
 
 <div class="container">
   <h2 class="title is-2 has-text-centered">Simulation Examples</h2>
@@ -508,7 +494,7 @@
     </div>
   </div>
 
-    <h3 class="title is-4 has-text-centered">Simpler Tasks</h3>
+    <h3 class="title is-4 has-text-centered">SIMPLER Tasks</h3>
   <div class="columns is-centered">
     <div class="column is-3">
       <video controls muted loop playsinline width="100%">
@@ -568,15 +554,43 @@
     </div>
   </div>
 
+<!-- Task Visualization -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+          <h2 class="title is-3">The Distilled VLM Benefits from Latent Actions</h2>
+          <!-- <img src="static/images/real_world.png" alt="Heat the Food Sequence" class="fullwidth">
+          <div class="prompt-text" style="text-align: justify;">
+            Tasks include pick-up, insertion, and other manipulation skills that demand both precise translational control and rotational motions.
+          </div> -->
+          <img src="static/images/heat_map.png" alt="Heat the Food Sequence" class="fullwidth">
+          <div class="prompt-text" style="text-align: justify;">
+            We visualize the attention maps between the final text token and the visual features for both \( \pi_{0.5} \) and our model across various real-robot tasks, and observe that 
+            <span style="color: #E6554F; font-weight: 600;">latent-action distillation significantly strengthens the model’s spatial understanding</span>.
+          </div>
+
+          <!-- <br>
+          <img src="static/images/real_word_b.JPG" alt="Heat the Food Sequence" class="fullwidth">
+          <div class="prompt-text">
+            Put the pot in the oven, close the oven, set the timer, open the oven and put the potbackon the table.
+
+          </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
     @article{li2025distilling,
-      title={Distilling Universal Latent Actions for Vision-Language-Action Models},
+      title={LatBot: Distilling Universal Latent Actions for Vision-Language-Action Models},
       author={Li, Zuolei and Gao, Xingyu and Wang, Xiaofan and Fu, Jianlong},
-      journal={arXiv preprint arXiv:XXXX.XXXXX},
+      journal={arXiv preprint arXiv:2511.23034},
       year={2025}
     }
     </code></pre>
@@ -588,10 +602,10 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="halo.pdf">
+         href="LatBot.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/NsurrenderX/gcr_lerobot_2" class="external-link" disabled>
+      <a class="icon-link" href="#" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
